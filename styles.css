@@ -321,3 +321,118 @@ button {
     margin-bottom: 0%;
 }
 
+/* Mengatur tampilan untuk perangkat mobile */
+@media (max-width: 768px) {
+
+    /* Header */
+    header {
+        padding: 10px 15px; /* Mengurangi padding pada header */
+        height: auto; /* Menyesuaikan tinggi header untuk lebih fleksibel */
+        flex-direction: column; /* Menata logo dan navigasi vertikal */
+        align-items: flex-start; /* Menyusun elemen secara vertikal */
+    }
+
+    header .logo h1 {
+        font-size: 18px; /* Menurunkan ukuran font logo */
+        margin-left: 0; /* Menjaga jarak logo dekat dengan kiri */
+    }
+
+    nav ul {
+        flex-direction: column; /* Menyusun menu navigasi secara vertikal */
+        margin-right: 0;
+        margin-top: 10px; /* Memberikan jarak antar menu */
+    }
+
+    nav ul li {
+        margin-right: 0; /* Menghilangkan margin kanan */
+        margin-bottom: 10px; /* Memberikan jarak antar item navigasi */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Menurunkan ukuran font untuk navigasi */
+    }
+
+    /* Banner */
+    .banner {
+        padding: 50px 10px; /* Mengurangi padding di banner */
+    }
+
+    .banner h2 {
+        font-size: 2em; /* Mengurangi ukuran teks pada banner */
+        margin-bottom: 10px;
+    }
+
+    .cta-btn {
+        padding: 8px 15px; /* Menyesuaikan ukuran tombol */
+        font-size: 16px; /* Ukuran font tombol lebih kecil */
+    }
+
+    /* Tabel Datasheet */
+    .datasheet-table, .datasheet-table th, .datasheet-table td {
+        display: block; /* Mengubah tabel menjadi format block agar lebih mudah dibaca di mobile */
+        width: 100%;
+    }
+
+    .datasheet-table th, .datasheet-table td {
+        padding: 12px 5px; /* Menyesuaikan padding untuk elemen tabel */
+        text-align: left; /* Memperbaiki alignment */
+    }
+
+    .datasheet-table td:first-child, .datasheet-table th:first-child {
+        width: auto; /* Menyesuaikan lebar kolom pertama */
+    }
+
+    .datasheet-table td:nth-child(2), .datasheet-table th:nth-child(2) {
+        width: auto; /* Menyesuaikan lebar kolom gambar */
+    }
+
+    /* Memperbesar gambar produk di tabel */
+    .product-image {
+        max-width: 100px;
+        max-height: 75px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px 10px; /* Mengurangi padding footer */
+    }
+
+    .email-link, .social-link {
+        font-size: 14px; /* Ukuran font lebih kecil untuk link di footer */
+        margin-bottom: 8px; /* Memberikan jarak antar link */
+    }
+
+    /* Menambahkan padding pada tombol pencarian di mobile */
+    .search-container input {
+        width: 150px; /* Mengurangi lebar input pencarian */
+        padding: 5px;
+        font-size: 14px; /* Mengurangi ukuran font di input */
+    }
+
+    .search-container button {
+        padding: 5px 10px;
+        font-size: 14px; /* Ukuran font tombol lebih kecil */
+    }
+
+    /* Menyusun elemen About Section agar lebih compact */
+    .about-container {
+        padding: 30px 10px; /* Mengurangi padding pada about */
+    }
+
+    /* Ikon PDF */
+    .pdf-icon {
+        width: 20px;
+        height: 20px; /* Ukuran ikon lebih kecil */
+    }
+    
+    .download-btn {
+        font-size: 14px; /* Ukuran font lebih kecil pada tombol download */
+        padding: 5px 10px; /* Menyesuaikan padding tombol download */
+    }
+
+    /* Social Media Links */
+    .social-link {
+        margin-top: 5px; /* Mengurangi jarak antar sosial link */
+    }
+}
+
