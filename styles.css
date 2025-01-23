@@ -321,15 +321,14 @@ button {
     margin-bottom: 0%;
 }
 
-/* Mengatur tampilan untuk perangkat mobile */
 @media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Ukuran font lebih kecil */
+        padding: 0 10px; /* Memberikan padding */
+    }
 
-    /* Header */
     header {
-        padding: 10px 15px; /* Mengurangi padding pada header */
-        height: auto; /* Menyesuaikan tinggi header untuk lebih fleksibel */
-        flex-direction: column; /* Menata logo dan navigasi vertikal */
-        align-items: flex-start; /* Menyusun elemen secara vertikal */
+        flex-wrap: wrap; /* Menghindari elemen overlap */
     }
 
     header .logo h1 {
@@ -338,9 +337,9 @@ button {
     }
 
     nav ul {
-        flex-direction: column; /* Menyusun menu navigasi secara vertikal */
-        margin-right: 0;
-        margin-top: 10px; /* Memberikan jarak antar menu */
+        display: flex; /* Menjadikan menu horizontal */
+        flex-direction: row; /* Tetap horizontal */
+        justify-content: space-around; /* Menyusun rata */
     }
 
     nav ul li {
@@ -363,14 +362,19 @@ button {
     }
 
     .cta-btn {
-        padding: 8px 15px; /* Menyesuaikan ukuran tombol */
-        font-size: 16px; /* Ukuran font tombol lebih kecil */
+        font-size: 12px; /* Menyesuaikan ukuran tombol */
     }
 
-    /* Tabel Datasheet */
-    .datasheet-table, .datasheet-table th, .datasheet-table td {
-        display: block; /* Mengubah tabel menjadi format block agar lebih mudah dibaca di mobile */
+    .datasheet-table {
+        display: table; /* Pastikan tabel tetap berbasis tabel */
         width: 100%;
+        border-collapse: collapse;
+    }
+    
+    .datasheet-table th, .datasheet-table td {
+        display: table-cell; /* Kembalikan ke format cell */
+        padding: 8px;
+        text-align: center; /* Center jika diperlukan */
     }
 
     .datasheet-table th, .datasheet-table td {
@@ -386,10 +390,9 @@ button {
         width: auto; /* Menyesuaikan lebar kolom gambar */
     }
 
-    /* Memperbesar gambar produk di tabel */
     .product-image {
-        max-width: 100px;
-        max-height: 75px;
+        max-width: 100%; /* Pastikan gambar berskala sesuai container */
+        height: auto; /* Menjaga proporsi gambar */
     }
 
     /* Footer */
